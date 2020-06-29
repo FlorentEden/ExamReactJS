@@ -1,19 +1,62 @@
 import React from 'react';
 import Products from './composents/Products/Products.js';
+import Products2 from './composents/Products/Products2.js';
+import Modals from './composents/modal/modal.js'
 import './App.scss';
+import { Row, Col, Button, ButtonGroup } from 'react-bootstrap';
+import RBCarousel from "react-bootstrap-carousel";
+import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
 
+const styles = { height: 400, width: "100%" };
+const icon_glass = <span className="fa fa-glass" />;
+const icon_music = <span className="fa fa-music" />;
 
 class App extends React.Component{
+
   constructor(props){
     super(props);
+    this.slider = React.createRef();
     this.state = {
       nbLines: [],
+      modal: false,
+      autoplay: true,
     }
   }
+
+  _onSelect = (active, direction) => {
+    console.log(`active=${active} && direction=${direction}`);
+  };
+  _visiableOnSelect = (active) => {
+    console.log(`visiable onSelect active=${active}`);
+  };
+  _slideNext = () => {
+    this.slider.current.slideNext();
+  };
+  _slidePrev = () => {
+    this.slider.current.slidePrev();
+  };
+  _goToSlide = () => {
+    this.slider.current.goToSlide(1);
+  };
+  _autoplay = () => {
+    this.setState({ autoplay: !this.state.autoplay });
+  };
+  _changeIcon = () => {
+    let { leftIcon, rightIcon } = this.state;
+    leftIcon = leftIcon ? undefined : icon_glass;
+    rightIcon = rightIcon ? undefined : icon_music;
+    this.setState({ leftIcon, rightIcon });
+  };
 
   addProducts(){
     this.state.nbLines.push(1);
     this.setState({});
+  }
+
+  toggle = () => {
+    this.setState({
+      modal: !this.state.modal
+    });
   }
 
   render(){
@@ -24,6 +67,7 @@ class App extends React.Component{
           <div className="Separator"></div>
           <p>Quisque diam lorem interdum vitaapibus vitae pede. Donec eget tellus non erat lacinia fertum. Donec in velit vel ipsum auctovinar.</p>
         </div>
+        <MDBBtn color="red" onClick={this.toggle}>Decouvrir</MDBBtn>
         <div className="Products">
           {this.state.nbLines.map((item, i) => {
               return <Products page={i+1} key={i+1}></Products>
@@ -31,6 +75,19 @@ class App extends React.Component{
           <Products page={0}></Products>
           <button onClick={() => this.addProducts()}>All Properties</button>
         </div>
+
+        <MDBContainer>
+          <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="lg">
+            <MDBModalHeader>
+              <MDBBtn color="red" onClick={this.toggle}>Close</MDBBtn>
+            </MDBModalHeader>
+            <MDBModalBody className='Modal'>
+              <Products2 page={0}></Products2>
+            </MDBModalBody>
+          </MDBModal>
+        </MDBContainer>
+
+
       </div>
     );
   }
