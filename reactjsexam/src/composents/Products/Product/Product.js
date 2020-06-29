@@ -4,23 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
 class Product extends React.Component{
-  constructor(props){
-    super(props);
-
-  }
   render(){
     return (
       <div className="Product">
-        <img></img>
-        <h5>1450 Cloudcroft Drop</h5>
-        <p>Illinois / Chicago</p>
-        <span>$250,000</span>
+        <img src={this.props.img} alt="Image de l'appartement"></img>
+        <h5>{this.props.address}</h5>
+        <p>{this.props.city}</p>
+        <span>{this.props.dollar}</span>
         <div className="moreInfo">
-          <p>3400 Sq Ft</p>
+          <p>{this.props.squareFit} Sq Ft</p>
             <FontAwesomeIcon className="dot-Separator" icon={faCircle} />
-          <p>2 Bedrooms</p>
+          <p>{this.props.nbBedRoom} Bedrooms</p>
             <FontAwesomeIcon className="dot-Separator" icon={faCircle} />
-          <p>1 Bathroom</p>
+          <p>{this.props.nbBathRoom} Bathroom</p>
         </div>
       </div>
     );
