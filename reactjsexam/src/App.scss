@@ -56,22 +56,11 @@ body {
   margin-right: auto;
 }
 
-.Products{
-}
 
 .ProductsLines{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.Product{
-  margin: 20px 15px 20px 15px;
-  border-radius: 3px;
-  border: 1px solid #e6e6e6;
-  background-color: #ffffff;
-  transition: 0.7s;
-  cursor: pointer;
 }
 
 .Product{
