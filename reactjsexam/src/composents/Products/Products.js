@@ -47,7 +47,7 @@ class Products extends React.Component{
       )
     }
     return (
-      <p>Loading...</p>
+      <p></p>
     );
   }
 }
