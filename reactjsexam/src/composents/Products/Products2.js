@@ -4,10 +4,6 @@ import './Products.scss';
 import RBCarousel from "react-bootstrap-carousel";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
-const styles = { height: 400, width: "100%" };
-const icon_glass = <span className="fa fa-glass" />;
-const icon_music = <span className="fa fa-music" />;
-
 class Products2 extends React.Component{
   constructor(props){
     super(props);
@@ -38,12 +34,7 @@ class Products2 extends React.Component{
   _autoplay = () => {
     this.setState({ autoplay: !this.state.autoplay });
   };
-  _changeIcon = () => {
-    let { leftIcon, rightIcon } = this.state;
-    leftIcon = leftIcon ? undefined : icon_glass;
-    rightIcon = rightIcon ? undefined : icon_music;
-    this.setState({ leftIcon, rightIcon });
-  };
+
 
   componentDidMount(){
     this.searchProduct();

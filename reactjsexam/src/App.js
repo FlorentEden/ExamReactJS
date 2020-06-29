@@ -1,11 +1,13 @@
 import React from 'react';
 import Products from './composents/Products/Products.js';
 import Products2 from './composents/Products/Products2.js';
-import Modals from './composents/modal/modal.js'
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 import './App.scss';
-import { Row, Col, Button, ButtonGroup } from 'react-bootstrap';
-import RBCarousel from "react-bootstrap-carousel";
 import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+import Typewriter from 'typewriter-effect';
+
+
 
 const styles = { height: 400, width: "100%" };
 const icon_glass = <span className="fa fa-glass" />;
@@ -63,7 +65,7 @@ class App extends React.Component{
     return(
       <div className="App">
         <div className="Header">
-          <h1>Featured <span>Properties</span></h1>
+          <h1><span>Featured &nbsp;</span><Typewriter className="SpanH1" options={{strings: ['Properties', 'Appartements', 'Your futur house'], autoStart: true, loop: true,}}/></h1>
           <div className="Separator"></div>
           <p>Quisque diam lorem interdum vitaapibus vitae pede. Donec eget tellus non erat lacinia fertum. Donec in velit vel ipsum auctovinar.</p>
         </div>
@@ -86,6 +88,7 @@ class App extends React.Component{
             </MDBModalBody>
           </MDBModal>
         </MDBContainer>
+
 
 
       </div>

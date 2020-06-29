@@ -31,7 +31,7 @@ class Products extends React.Component{
           alert(error);
           this.setState({load: false});
         }
-        );
+      );
     }
 
   render(){
@@ -47,7 +47,7 @@ class Products extends React.Component{
       )
     }
     return (
-      <p>...</p>
+      <p>Loading...</p>
     );
   }
 }
