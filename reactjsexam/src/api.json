@@ -1,0 +1,72 @@
+[
+  {
+    "_id": "60561e57c382d2b98c482b19",
+    "dollar": 149817,
+    "img": "http://placehold.it/32x32",
+    "squareFit": 300,
+    "city": "Clarence",
+    "address": "172 Devoe Street",
+    "nbBedRoom": 5,
+    "nbBathRoom": 2
+  },
+  {
+    "_id": "60561e57316a665858b49bf7",
+    "dollar": 50331,
+    "img": "http://placehold.it/32x32",
+    "squareFit": 76,
+    "city": "Coaldale",
+    "address": "586 Cedar Street",
+    "nbBedRoom": 2,
+    "nbBathRoom": 5
+  },
+  {
+    "_id": "60561e57926e1ca7aa0eecb5",
+    "dollar": 14548,
+    "img": "http://placehold.it/32x32",
+    "squareFit": 174,
+    "city": "Darlington",
+    "address": "237 Montauk Avenue",
+    "nbBedRoom": 4,
+    "nbBathRoom": 2
+  },
+  {
+    "_id": "60561e57722fb2126b67a465",
+    "dollar": 23418,
+    "img": "http://placehold.it/32x32",
+    "squareFit": 90,
+    "city": "Forbestown",
+    "address": "375 Belmont Avenue",
+    "nbBedRoom": 2,
+    "nbBathRoom": 4
+  },
+  {
+    "_id": "60561e57df0962456bb386e9",
+    "dollar": 46313,
+    "img": "http://placehold.it/32x32",
+    "squareFit": 94,
+    "city": "Hiseville",
+    "address": "331 McDonald Avenue",
+    "nbBedRoom": 5,
+    "nbBathRoom": 2
+  },
+  {
+    "_id": "60561e577fe3f189aec8d931",
+    "dollar": 153658,
+    "img": "http://placehold.it/32x32",
+    "squareFit": 299,
+    "city": "Salvo",
+    "address": "132 Columbus Place",
+    "nbBedRoom": 2,
+    "nbBathRoom": 6
+  },
+  {
+    "_id": "60561e575b91a9e54dea0b35",
+    "dollar": 88260,
+    "img": "http://placehold.it/32x32",
+    "squareFit": 275,
+    "city": "Bourg",
+    "address": "885 Seabring Street",
+    "nbBedRoom": 2,
+    "nbBathRoom": 6
+  }
+]

@@ -17,11 +17,12 @@ class Products extends React.Component{
   }
 
   searchProduct(){
-      fetch("http://92.222.69.104/appartement/all?size=6&page="+this.props.page)
+      fetch("http://www.json-generator.com/api/json/get/ceXAUnjMZe?indent=2")
       .then(res => res.json())
       .then(
         (result) => {
-          this.setState({record:result.content,load: true});
+          this.setState({record:result,load: true});
+          console.log("res : "+result);
           if (result.numberOfElements == 0) {
             this.setState({Endofrecord: true});
             alert("Plus d'appartement à découvrir :(")
